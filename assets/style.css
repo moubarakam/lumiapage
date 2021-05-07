@@ -1,0 +1,169 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: #f4f0ea;
+    color: #000f16;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+.fl-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fafafa;
+    font-size: 5rem;
+    text-align: center;
+}
+.bg-1{
+    background: linear-gradient(45deg, #00000066, #00000066), url(bg1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+}
+.bg-2{
+    background-image: url(bg2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+.desktop{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+        "galerie galerie galerie galerie phone message"
+        "galerie galerie galerie galerie facebook facebook"
+        "instagram instagram windows navigateur facebook facebook"
+        "instagram instagram social shopping camera camera"
+        "citation citation citation citation camera camera"
+        ;
+    min-height: 110vh;
+    background: linear-gradient(to right, #2948ff, #396afc);
+}
+.desktop > div{
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all ease-in .3s;
+}
+.desktop > div:hover{
+    opacity: .9;
+    transform: scale(.98);
+}
+
+.galerie{
+    grid-area: galerie;
+    height: 360px;
+    overflow: hidden;
+    transform: none !important;
+}
+
+.galerie > img{
+    animation: zoom 4s ease-in infinite;
+}
+@keyframes zoom{
+    0%{height: 120%;}
+    10%{height: 107%;}
+    90%{height: 107%;}
+    100%{height: 120%;}
+}
+
+.phone{
+    grid-area: phone;
+}
+.message{
+    grid-area: message;
+}
+.facebook{
+    grid-area: facebook;
+    /* background: linear-gradient(to right, #2948ff, #396afc); */
+    font-size: 12rem;
+}
+.instagram{
+    grid-area: instagram;
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    font-size: 12rem;
+}
+.windows{
+    grid-area: windows;
+}
+.navigateur{
+    grid-area: navigateur;
+}
+.social{
+    grid-area: social;
+}
+.shopping{
+    grid-area: shopping;
+}
+.camera{
+    grid-area: camera;
+    font-size: 12rem;
+}
+.citation{
+    grid-area: citation;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px 30px;
+    font-family: 'Sail', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    .facebook, .instagram, .camera{
+        font-size: 8rem;
+    }
+    .phone, .message, .windows, .navigateur, .social, .shopping{
+        font-size: 3rem;
+    }
+    .citation{
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 870px) {
+    .desktop{gap: 3px;}
+    .facebook, .instagram, .camera{
+        font-size: 4.3rem;
+    }
+    .phone, .message, .windows, .navigateur, .social, .shopping{
+        font-size: 2.3rem;
+    }
+    .citation{
+        font-size: .7rem;
+    }
+}
+@media only screen and (max-width: 670px) {
+    .desktop{
+        gap: 5px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas: 
+        "galerie galerie"
+        "galerie galerie"
+        "phone message"
+        "facebook facebook"
+        "windows navigateur"
+        "instagram instagram"
+        "social shopping"
+        "camera camera"
+        "citation citation"
+        ;
+    }
+
+    .facebook, .instagram, .camera{
+        font-size: 8rem;
+    }
+    .phone, .message, .windows, .navigateur, .social, .shopping{
+        font-size: 5rem;
+    }
+    .citation{
+        font-size: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+}

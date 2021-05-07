@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Desktop</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Sail" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <main class="desktop">
+        <div class="galerie fl-center">
+            <img src="" alt="lorem ipsum" class="img-galerie">
+        </div>
+        <div class="phone fl-center bg-1"><i class="fas fa-phone-alt"></i></div>
+        <div class="message fl-center bg-2"><i class="fas fa-comment-alt"></i></div>
+        <div class="facebook fl-center"><i class="fab fa-facebook-square"></i></div>
+        <div class="instagram fl-center"><i class="fab fa-instagram-square"></i></div>
+        <div class="windows fl-center bg-2"><i class="fab fa-windows"></i></div>
+        <div class="navigateur fl-center bg-1"><i class="fab fa-internet-explorer"></i></div>
+        <div class="social fl-center bg-1"><i class="fab fa-skype"></i></div>
+        <div class="shopping fl-center bg-1"><i class="fas fa-store-alt"></i></div>
+        <div class="camera fl-center bg-2"><i class="fas fa-camera-retro"></i></div>
+        <div class="citation bg-2"><h2>Il est grand temps de rallumer les étoiles</h2></div>
+    </main>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/aa4019f427.js" crossorigin="anonymous"></script>
+    <script>
+        let i = 0;
+        const galerie = document.querySelector('.img-galerie');
+        const imgs = ['assets/img1.jpg', 'assets/img2.jpg', 'assets/img3.jpg', 'assets/img4.jpg'];
+        galerie.src = imgs[i];
+
+        function change(){
+            if(i < 0 || i > 3)
+                i = 0;
+
+            galerie.src = imgs[i];
+            i += 1;
+            setTimeout(change, 4000);
+        }
+        change();
+    </script>
+</body>
+</html>
