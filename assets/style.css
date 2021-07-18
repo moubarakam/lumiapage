@@ -41,7 +41,7 @@ body{
         "instagram instagram social shopping camera camera"
         "citation citation citation citation camera camera"
         ;
-    min-height: 110vh;
+    height: 100vh;
     background: linear-gradient(to right, #2948ff, #396afc);
 }
 .desktop > div{
